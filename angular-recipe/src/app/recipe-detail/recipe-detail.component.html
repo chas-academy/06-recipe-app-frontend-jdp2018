@@ -24,6 +24,16 @@
     <p>{{ meal.strMeasure12 }} {{ meal.strIngredient12 }}</p>
     <p>{{ meal.strMeasure13 }} {{ meal.strIngredient13 }}</p>
   </div>
+  {{ meal.strCategory }}
+  <button
+    *ngIf="loggedIn"
+    mat-raised-button
+    color="primary"
+    (click)="onSaveRecipes(meal.idMeal)"
+  >
+    Save this recipe!
+  </button>
+  <a href="/login" *ngIf="!loggedIn">Login to save Recipes!</a>
 
   <a href="{{ meal.strYoutube }}">Link to Video instuctions</a>
   <a href="{{ meal.strSource }}">Link to Source</a>

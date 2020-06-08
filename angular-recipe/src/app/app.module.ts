@@ -7,14 +7,7 @@ import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FooterComponent } from "./footer/footer.component";
 
-import {
-  MatInputModule,
-  MatCardModule,
-  MatButtonModule,
-  MatToolbarModule,
-  MatExpansionModule,
-  MatProgressSpinnerModule,
-} from "@angular/material";
+import { MatButtonModule, MatToolbarModule } from "@angular/material";
 
 import { CategoriesComponent } from "./categories/categories.component";
 import { RecipeDetailComponent } from "./recipe-detail/recipe-detail.component";
@@ -22,9 +15,6 @@ import { CategoriesFilterPipe } from "./categories/categories-filter.pipe";
 import { FormsModule } from "@angular/forms";
 import { LoginComponent } from "./login/login.component";
 import { SignUpComponent } from "./signup/signup.component";
-import { RequestResetComponent } from "./password/request-reset/request-reset.component";
-import { ResponseResetComponent } from "./password/response-reset/response-reset.component";
-import { SnotifyModule, SnotifyService, ToastDefaults } from "ng-snotify";
 import { SavedRecipesComponent } from "./saved-recipes/saved-recipes.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -39,8 +29,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     CategoriesFilterPipe,
     LoginComponent,
     SignUpComponent,
-    RequestResetComponent,
-    ResponseResetComponent,
     SavedRecipesComponent,
   ],
   imports: [
@@ -48,15 +36,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SnotifyModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
   ],
-  providers: [
-    { provide: "SnotifyToastConfig", useValue: ToastDefaults },
-    SnotifyService,
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

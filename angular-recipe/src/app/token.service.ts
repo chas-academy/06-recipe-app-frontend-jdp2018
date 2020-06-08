@@ -5,10 +5,11 @@ import { Injectable } from "@angular/core";
 })
 export class TokenService {
   private iss = {
-    login: "http://localhost:8000/api/login",
-    signup: "http://localhost:8000/api/signup",
-    recipes: "http://localhost:8000/api/recipes",
+    login: "http://mysterious-harbor-29675.herokuapp.com/api/login",
+    signup: "http://mysterious-harbor-29675.herokuapp.com/api/signup",
+    recipes: "http://mysterious-harbor-29675.herokuapp.com/api/recipes",
   };
+
   constructor() {}
 
   handle(token) {

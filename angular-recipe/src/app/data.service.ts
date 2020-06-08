@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Observable, forkJoin } from "rxjs";
-import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -11,7 +10,7 @@ export class DataService {
   constructor(private http: HttpClient) {}
   private randomUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
 
-  private baseUrl = "http://localhost:8000/api";
+  private baseUrl = "http://mysterious-harbor-29675.herokuapp.com/api";
 
   getRecipe(id: string): Observable<object> {
     return this.http.get(`${this.apiUrl}/lookup.php?i=${id}`);

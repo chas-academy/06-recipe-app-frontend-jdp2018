@@ -1,3 +1,6 @@
+{
+  /*
+
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "src/app/data.service";
 import { SnotifyService } from "ng-snotify";
@@ -29,4 +32,6 @@ export class RequestResetComponent implements OnInit {
   handleResponse() {
     this.form.email = null;
   }
+}
+*/
 }
